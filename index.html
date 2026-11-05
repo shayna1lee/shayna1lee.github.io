@@ -3,113 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAYNA PRIVÉ BOUTIQUE</title>
+    <title>Shayna | Modern Editorial Portfolio</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #FDFBF7; color: #262626; font-family: 'Playfair Display', 'Cormorant Garamond', serif; line-height: 1.6; overflow-x: hidden; }
-        
-        /* 🎬 Luxury Words Fade-In Animations */
-        @keyframes luxuryFadeIn {
-            0% { opacity: 0; transform: translateY(15px); filter: blur(4px); }
-            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-        }
-        @keyframes portraitReveal {
-            0% { opacity: 0; transform: scale(1.03); }
-            100% { opacity: 1; transform: scale(1); }
+        :root {
+            --bg-color: #FDFBF7; /* Soft Cream */
+            --text-main: #1A1A1A; /* Deep Charcoal */
+            --accent: #D4AF37; /* Muted Champagne */
+            --text-muted: #666666;
         }
 
-        .header { text-align: center; padding: 70px 20px 40px 20px; background: #FDFBF7; }
-        .sub-header { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #A8927B; margin-bottom: 20px; animation: luxuryFadeIn 1.2s ease forwards; }
-        .main-title { font-size: 34px; letter-spacing: 4px; text-transform: uppercase; font-weight: 300; animation: luxuryFadeIn 1.6s ease forwards; }
-        
-        /* Portrait Banner Layout */
-        .hero-banner { width: 100%; max-width: 1000px; margin: 0 auto 50px auto; padding: 0 20px; }
-        .image-container { position: relative; width: 100%; padding-bottom: 120%; background-color: #e5e5e5; overflow: hidden; border: 1px solid #E3CBB3; animation: portraitReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        .image-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Bio Block Container */
-        .bio-section { background-color: #262626; color: #FDFBF7; padding: 80px 20px; text-align: center; border-top: 1px solid #E3CBB3; border-bottom: 1px solid #E3CBB3; }
-        .bio-container { max-width: 700px; margin: 0 auto; }
-        .bio-title { font-size: 24px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; color: #E3CBB3; }
-        .bio-text { font-size: 16px; font-weight: 300; line-height: 1.9; }
-        
-        .grid-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-        .section-tag { text-align: center; font-size: 20px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 50px; color: #262626; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: #FDFBF7; padding: 40px 30px; border: 1px solid #E3CBB3; text-align: center; transition: transform 0.4s ease; }
-        .card:hover { transform: translateY(-5px); }
-        .card-title { font-size: 16px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; color: #262626; }
-        .card-desc { font-size: 14px; color: #555; font-weight: 300; line-height: 1.7; }
-        
-        /* ✉️ Newsletter Footer Area */
-        .footer { text-align: center; padding: 90px 20px; background-color: #FDFBF7; border-top: 1px solid #E3CBB3; }
-        .footer-title { font-size: 22px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; }
-        .footer-sub { font-weight: 300; color: #555; font-size: 15px; margin-bottom: 30px; }
-        .newsletter-form { max-width: 450px; margin: 0 auto 35px auto; display: flex; flex-direction: column; gap: 15px; }
-        .newsletter-input { padding: 14px; border: 1px solid #262626; background: #FDFBF7; color: #262626; font-family: inherit; font-size: 14px; text-align: center; outline: none; }
-        .submit-btn { padding: 14px; background-color: #262626; color: #FDFBF7; border: none; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; cursor: pointer; transition: background 0.3s ease; }
-        .submit-btn:hover { background-color: #A8927B; }
-        .email-link { font-size: 12px; letter-spacing: 1px; color: #A8927B; text-decoration: none; text-transform: uppercase; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            background: #ffffff;
+            padding: 40px 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        /* Fixed Image Wrapper */
+        .profile-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 24px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--bg-color);
+            background-color: #eaeaea; /* Fallback color while image loads */
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: block;
+            text-decoration: none;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            background-color: #F5F1E9;
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
-    <!-- SECTION 1: HEADER -->
-    <div class="header">
-        <div class="sub-header">B E A U T Y   •   E - C O M M E R C E   •   D I G I T A L   B L U E P R I N T S</div>
-        <h1 class="main-title">SHAYNA PRIVÉ BOUTIQUE</h1>
-    </div>
-
-    <!-- SECTION 2: EMBEDDED LUXURY PORTRAIT DISPLAY -->
-    <div class="hero-banner">
-        <div class="image-container">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" id="embeddedPortrait" alt="Shayna Privé Executive Portrait">
-        </div>
-    </div>
-
-    <!-- SECTION 3: ACADEMY INITIATION -->
-    <div class="bio-section">
-        <div class="bio-container">
-            <h2 class="bio-title">THE WIG INFLUENCER ACADEMY</h2>
-            <p class="bio-text">I teach everyday creators how to turn their passion for hair and beauty into an authoritative, high-earning digital brand. My step-by-step blueprints give you the exact content hooks, communication strategies, and verified vendor contacts needed to land consistent sponsorships and dominate your niche.</p>
-        </div>
-    </div>
-
-    <!-- SECTION 4: THE RESOURCES -->
-    <div class="grid-section">
-        <h2 class="section-tag">Inside the Blueprint</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3 class="card-title">THE CONTENT FORMULA</h3>
-                <p class="card-desc">Mastering high-definition installs, eye-catching thumbnails, and viral TikTok visual hooks that command brand attention.</p>
-            </div>
-            <div class="card">
-                <h3 class="card-title">THE PITCH VAULT</h3>
-                <p class="card-desc">Copy-and-paste proposal templates, proper professional email etiquette rules, and systematic follow-up scripts.</p>
-            </div>
-            <div class="card">
-                <h3 class="card-title">THE BRAND MATRIX</h3>
-                <p class="card-desc">A curated list of active hair vendors, beauty brands, and tech placement agencies looking for micro-influencers right now.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECTION 5: AUTOMATED NEWSLETTER & INQUIRIES -->
-    <div class="footer">
-        <h2 class="footer-title">LET'S BUILD A MASTERPIECE</h2>
-        <p class="footer-sub">Join the inner circle for free gem drops, premium pitching cheat sheets, and release updates.</p>
+    <div class="container">
         
-        <form class="newsletter-form" onsubmit="alert('Welcome to the Atelier, Gorgeous. Check your inbox soon!'); return false;">
-            <input type="email" class="newsletter-input" placeholder="ENTER YOUR EMAIL ADDRESS" required>
-            <button type="submit" class="submit-btn">Secure Instant Access</button>
-        </form>
+        <!-- PROFILE IMAGE SECTION -->
+        <div class="profile-container">
+            <!-- CHANGE 'profile.jpg' TO YOUR EXACT FILE NAME (E.G. shayna.png) -->
+            <img src="profile.jpg" alt="Shayna">
+        </div>
 
-        <a href="mailto:Shaynaleebusiness@gmail.com" class="email-link">Direct Inquiry: Shaynaleebusiness@gmail.com</a>
+        <h1>@shayna1lee</h1>
+        <p class="tagline">Luxury Wigs &bull; Brand Influence &bull; Digital Campaigns</p>
+
+        <!-- LINKS SECTION -->
+        <div class="links-wrapper">
+            <a href="#" class="link-card">Shop Premium Units</a>
+            <a href="#" class="link-card">Brand Collaborations & Media Kit</a>
+            <a href="#" class="link-card">Latest App Campaigns</a>
+            <a href="mailto:Shaynaleebusiness@gmail.com" class="link-card" style="color: var(--accent);">Inquiries: Shaynaleebusiness@gmail.com</a>
+        </div>
+
+        <div class="footer-text">Shayna Lee &copy; 2026</div>
+
     </div>
 
-    <script>
-        // Formatted asset delivery channel injected securely for system presentation
-        document.getElementById('embeddedPortrait').src = "https://imgbox.com";
-    </script>
 </body>
 </html>

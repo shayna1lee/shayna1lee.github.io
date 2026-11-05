@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayna | Modern Editorial Portfolio</title>
+    <title>@shayna1lee | Luxury Authority & Editorial Flagship</title>
     <style>
         :root {
-            --bg-color: #FDFBF7; /* Soft Cream */
-            --text-main: #1A1A1A; /* Deep Charcoal */
-            --accent: #D4AF37; /* Muted Champagne */
-            --text-muted: #666666;
+            --bg-cream: #FDFBF7;
+            --charcoal: #1A1A1A;
+            --champagne: #D4AF37;
+            --muted-gray: #767676;
+            --card-bg: #FFFFFF;
         }
 
         * {
@@ -19,113 +20,147 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--bg-cream);
+            color: var(--charcoal);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 24px;
         }
 
-        .container {
-            max-width: 480px;
+        .editorial-wrapper {
+            max-width: 540px;
             width: 100%;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 48px 32px;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.015);
             text-align: center;
-            background: #ffffff;
-            padding: 40px 24px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
-        /* Fixed Image Wrapper */
-        .profile-container {
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 24px auto;
+        .profile-frame {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 28px auto;
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid var(--bg-color);
-            background-color: #eaeaea; /* Fallback color while image loads */
+            border: 1px solid var(--champagne);
+            padding: 6px;
+            background-color: var(--bg-cream);
         }
 
-        .profile-container img {
+        .profile-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
             display: block;
         }
 
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            margin-bottom: 8px;
+        .brand-title {
+            font-family: "Didot", "Bodoni MT", "Cinzel", serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            color: var(--charcoal);
         }
 
-        .tagline {
+        .brand-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--champagne);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .bio-text {
             font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            line-height: 1.4;
+            line-height: 1.6;
+            color: var(--muted-gray);
+            margin-bottom: 36px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .links-wrapper {
+        .links-container {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 18px;
         }
 
-        .link-card {
+        .editorial-link {
             display: block;
             text-decoration: none;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            padding: 16px;
-            border-radius: 12px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-
-        .link-card:hover {
-            transform: translateY(-2px);
-            background-color: #F5F1E9;
-        }
-
-        .footer-text {
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
+            color: var(--charcoal);
+            border: 1px solid var(--charcoal);
+            padding: 18px 24px;
+            font-size: 0.9rem;
             text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .editorial-link:hover {
+            background-color: var(--charcoal);
+            color: var(--bg-cream);
+            transform: translateY(-1px);
+        }
+
+        .editorial-link.highlight {
+            border-color: var(--champagne);
+            color: var(--champagne);
+        }
+
+        .editorial-link.highlight:hover {
+            background-color: var(--champagne);
+            color: #FFFFFF;
+        }
+
+        .editorial-footer {
+            margin-top: 48px;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--muted-gray);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="editorial-wrapper">
         
-        <!-- PROFILE IMAGE SECTION -->
-        <div class="profile-container">
-            <!-- Your exact photo filename linked perfectly below -->
-            <img src="A1B15C0F-751F-43D1-4DFBB13EFF19.png" alt="Shayna">
+        <!-- LUXURY PORTRAIT FRAME -->
+        <div class="profile-frame">
+            <img src="A1B15C0F-751F-43D1-4DFBB13EFF19.png" alt="Shayna Lee">
         </div>
 
-        <h1>@shayna1lee</h1>
-        <p class="tagline">Luxury Wigs &bull; Brand Influence &bull; Digital Campaigns</p>
+        <!-- RECLAIMED HEADERS FROM YESTERDAY -->
+        <h1 class="brand-title">Shayna Lee</h1>
+        <div class="brand-subtitle">The Editorial Flagship</div>
+        
+        <p class="bio-text">
+            Bridging high-end hair artistry with digital-first brand curation. Cultivating premium beauty aesthetics, authoritative influencer campaigns, and seamless app installations.
+        </p>
 
-        <!-- LINKS SECTION -->
-        <div class="links-wrapper">
-            <a href="#" class="link-card">Shop Premium Units</a>
-            <a href="#" class="link-card">Brand Collaborations & Media Kit</a>
-            <a href="#" class="link-card">Latest App Campaigns</a>
-            <a href="mailto:Shaynaleebusiness@gmail.com" class="link-card" style="color: var(--accent);">Inquiries: Shaynaleebusiness@gmail.com</a>
+        <!-- LUXURY LOOKBOOK LINKS -->
+        <div class="links-container">
+            <a href="#" class="editorial-link">Shop Premium Wig Boutique</a>
+            <a href="#" class="editorial-link">Brand Collaborations & Media Kit</a>
+            <a href="#" class="editorial-link">Latest App Campaigns & Promotions</a>
+            <a href="mailto:Shaynaleebusiness@gmail.com" class="editorial-link highlight">Inquiries: Shaynaleebusiness@gmail.com</a>
         </div>
 
-        <div class="footer-text">Shayna Lee &copy; 2026</div>
+        <div class="editorial-footer">SHAYNA LEE &bull; EST. 2026</div>
 
     </div>
 
